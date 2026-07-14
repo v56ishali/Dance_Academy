@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Dance Styles - Vishu's Dance Academy</title>
+        <!-- Tailwind CSS v4 Play CDN -->
+        <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+        <!-- Google Fonts: Playfair Display & Plus Jakarta Sans -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+        
+        <style type="text/tailwindcss">
+            :root {
+                --font-serif: 'Playfair Display', serif;
+                --font-sans: 'Plus Jakarta Sans', sans-serif;
+            }
+            .gold-gradient-bg {
+                background: linear-gradient(135deg, #FBF8F3 0%, #FFFFFF 100%);
+            }
+            .gold-border-glow:hover {
+                box-shadow: 0 0 15px rgba(212, 175, 55, 0.15);
+            }
+        </style>
+    </head>
+    <body class="bg-white text-neutral-800 font-sans antialiased">
+        
+        <!-- Header & Navigation -->
+        <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-[#D4AF37]/20 shadow-xs">
+            <div class="max-w-7xl mx-auto px-6 py-4 flex flex-row items-center justify-between gap-4">
+                <!-- Title / Logo -->
+                <h1 class="flex items-center gap-2 font-serif text-base sm:text-lg lg:text-2xl font-bold tracking-wide text-neutral-900 shrink-0">
+                    <img src="assets/Profile_img.png" width="30" alt="Vishu's Dance Academy Logo" class="object-contain">
+                    Vishu's <span class="text-[#D4AF37]">Dance Academy</span>
+                </h1>
+                
+                <!-- Navbar Links & Smaller Buttons -->
+                <nav class="flex items-center gap-x-2 sm:gap-x-3 lg:gap-x-4 text-[11px] lg:text-sm font-semibold tracking-wider uppercase text-neutral-600 whitespace-nowrap overflow-x-auto md:overflow-visible">
+                    <a href="index.html" class="hover:text-[#D4AF37] transition-colors">Home</a>
+                    <a href="About.html" class="hover:text-[#D4AF37] transition-colors">About Us</a>
+                    <a href="DanceStyle.html" class="text-[#D4AF37] hover:text-[#AA823B] transition-colors">Dance Styles</a>
+                    <a href="Admission.html" class="hover:text-[#D4AF37] transition-colors">Admission</a>
+                    <a href="Gallery.html" class="hover:text-[#D4AF37] transition-colors">Gallery</a>
+                    <a href="Events.html" class="hover:text-[#D4AF37] transition-colors">Events</a>
+                    <a href="Contact.html" class="hover:text-[#D4AF37] transition-colors">Contact</a>
+                    <a href="faq.html" class="hover:text-[#D4AF37] transition-colors">FAQ</a>
+                    <a href="Login.html" class="ml-1 px-2.5 py-1 text-[10px] lg:text-xs border border-[#D4AF37] text-[#D4AF37] rounded-full hover:bg-[#D4AF37] hover:text-white transition-all duration-300">Login</a>
+                    <a href="Sign.html" class="px-2.5 py-1 text-[10px] lg:text-xs bg-[#D4AF37] text-white rounded-full hover:bg-[#AA823B] transition-all duration-300 shadow-sm shadow-[#D4AF37]/10">Sign Up</a>
+                </nav>
+            </div>
+        </header>
+
+        <!-- Title Section -->
+        <section class="gold-gradient-bg py-16 border-b border-[#D4AF37]/15">
+            <div class="max-w-4xl mx-auto px-6 text-center space-y-4">
+                <span class="text-xs uppercase tracking-widest text-[#D4AF37] font-bold">Curriculum Styles</span>
+                <h2 class="font-serif text-3xl sm:text-4xl font-bold text-neutral-900">Our Dance Styles</h2>
+                <div class="w-12 h-0.5 bg-[#D4AF37] mx-auto"></div>
+                <p class="text-neutral-600 text-base max-w-2xl mx-auto">
+                    Discover a variety of dance forms taught by our experienced instructors. Whether you are a beginner or an advanced learner, we have the perfect class for you.
+                </p>
+            </div>
+        </section>
+
+        <!-- Dance Styles Cards Grid -->
+        <section class="py-20 max-w-7xl mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                
+                <!-- Card 1: Bharatanatyam -->
+                <div class="bg-white border border-[#D4AF37]/20 p-6 rounded-sm transition-all duration-300 hover:border-[#D4AF37] gold-border-glow flex flex-col items-center text-center">
+                    <!-- Image container with auto-height and contain layout to prevent cropping -->
+                    <div class="w-full mb-6 border border-neutral-100 rounded-sm bg-[#FDFBF7] flex items-center justify-center overflow-hidden">
+                        <img src="assets/Bharatanatyam.png" alt="Bharatanatyam" class="w-full h-auto object-contain transition-transform duration-500 hover:scale-105">
+                    </div>
+                    <h3 class="font-serif text-xl font-bold text-neutral-900 mb-3">Bharatanatyam</h3>
+                    <p class="text-neutral-500 text-sm leading-relaxed">
+                        A highly disciplined, classical Indian dance style known for its rich cultural history, grace, facial expressions, and dynamic rhythmic footwork.
+                    </p>
+                </div>
+
+                <!-- Card 2: Hip Hop -->
+                <div class="bg-white border border-[#D4AF37]/20 p-6 rounded-sm transition-all duration-300 hover:border-[#D4AF37] gold-border-glow flex flex-col items-center text-center">
+                    <!-- Image container with auto-height and contain layout to prevent cropping -->
+                    <div class="w-full mb-6 border border-neutral-100 rounded-sm bg-[#FDFBF7] flex items-center justify-center overflow-hidden">
+                        <img src="assets/HipHop.png" alt="Hip Hop" class="w-full h-auto object-contain transition-transform duration-500 hover:scale-105">
+                    </div>
+                    <h3 class="font-serif text-xl font-bold text-neutral-900 mb-3">Hip Hop</h3>
+                    <p class="text-neutral-500 text-sm leading-relaxed">
+                        A modern and high-energy dance style focused on freestyle rhythm, control, popping, locking, and expressing unique individual style.
+                    </p>
+                </div>
+
+                <!-- Card 3: Western -->
+                <div class="bg-white border border-[#D4AF37]/20 p-6 rounded-sm transition-all duration-300 hover:border-[#D4AF37] gold-border-glow flex flex-col items-center text-center">
+                    <!-- Image container with auto-height and contain layout to prevent cropping -->
+                    <div class="w-full mb-6 border border-neutral-100 rounded-sm bg-[#FDFBF7] flex items-center justify-center overflow-hidden">
+                        <img src="assets/Western.png" alt="Western" class="w-full h-auto object-contain transition-transform duration-500 hover:scale-105">
+                    </div>
+                    <h3 class="font-serif text-xl font-bold text-neutral-900 mb-3">Contemporary</h3>
+                    <p class="text-neutral-500 text-sm leading-relaxed">
+                        A highly fun, contemporary, and expressive dance form performed to popular modern music, emphasizing physical fitness and quick choreography.
+                    </p>
+                </div>
+
+                <div class="bg-white border border-[#D4AF37]/20 p-6 rounded-sm transition-all duration-300 hover:border-[#D4AF37] gold-border-glow flex flex-col items-center text-center">
+                    <!-- Image container with auto-height and contain layout to prevent cropping -->
+                    <div class="w-full mb-6 border border-neutral-100 rounded-sm bg-[#FDFBF7] flex items-center justify-center overflow-hidden">
+                        <img src="assets/Ballet.png" alt="Western" class="w-full h-auto object-contain transition-transform duration-500 hover:scale-105">
+                    </div>
+                    <h3 class="font-serif text-xl font-bold text-neutral-900 mb-3">Ballet</h3>
+                    <p class="text-neutral-500 text-sm leading-relaxed">
+                        An elegant and graceful dance style that emphasizes balance, flexibility, precise technique, posture, and expressive movements through classical choreography.
+                    </p>
+                </div>
+
+                <div class="bg-white border border-[#D4AF37]/20 p-6 rounded-sm transition-all duration-300 hover:border-[#D4AF37] gold-border-glow flex flex-col items-center text-center">
+                    <!-- Image container with auto-height and contain layout to prevent cropping -->
+                    <div class="w-full mb-6 border border-neutral-100 rounded-sm bg-[#FDFBF7] flex items-center justify-center overflow-hidden">
+                        <img src="assets/Kathak.png" alt="Western" class="w-full h-auto object-contain transition-transform duration-500 hover:scale-105">
+                    </div>
+                    <h3 class="font-serif text-xl font-bold text-neutral-900 mb-3">Kathak</h3>
+                    <p class="text-neutral-500 text-sm leading-relaxed">
+                        A classical Indian dance style known for rhythmic footwork, graceful spins, expressive storytelling, intricate hand gestures, and emotional performances.
+                    </p>
+                </div>
+
+                <div class="bg-white border border-[#D4AF37]/20 p-6 rounded-sm transition-all duration-300 hover:border-[#D4AF37] gold-border-glow flex flex-col items-center text-center">
+                    <!-- Image container with auto-height and contain layout to prevent cropping -->
+                    <div class="w-full mb-6 border border-neutral-100 rounded-sm bg-[#FDFBF7] flex items-center justify-center overflow-hidden">
+                        <img src="assets/Salsa.png" alt="Western" class="w-full h-auto object-contain transition-transform duration-500 hover:scale-105">
+                    </div>
+                    <h3 class="font-serif text-xl font-bold text-neutral-900 mb-3">Salsa</h3>
+                    <p class="text-neutral-500 text-sm leading-relaxed">
+                        A lively and energetic partner dance style featuring rhythmic footwork, smooth turns, coordinated movements, and vibrant Latin-inspired music.
+                    </p>
+                </div>
+
+                <div class="bg-white border border-[#D4AF37]/20 p-6 rounded-sm transition-all duration-300 hover:border-[#D4AF37] gold-border-glow flex flex-col items-center text-center">
+                    <!-- Image container with auto-height and contain layout to prevent cropping -->
+                    <div class="w-full mb-6 border border-neutral-100 rounded-sm bg-[#FDFBF7] flex items-center justify-center overflow-hidden">
+                        <img src="assets/Jazz.png" alt="Western" class="w-full h-auto object-contain transition-transform duration-500 hover:scale-105">
+                    </div>
+                    <h3 class="font-serif text-xl font-bold text-neutral-900 mb-3">Jazz</h3>
+                    <p class="text-neutral-500 text-sm leading-relaxed">
+                        A dynamic and expressive dance style that combines energetic movements, flexibility, rhythm, sharp techniques, and creative performance.
+                    </p>
+                </div>
+
+                <div class="bg-white border border-[#D4AF37]/20 p-6 rounded-sm transition-all duration-300 hover:border-[#D4AF37] gold-border-glow flex flex-col items-center text-center">
+                    <!-- Image container with auto-height and contain layout to prevent cropping -->
+                    <div class="w-full mb-6 border border-neutral-100 rounded-sm bg-[#FDFBF7] flex items-center justify-center overflow-hidden">
+                        <img src="assets/Bollywood.png" alt="Western" class="w-full h-auto object-contain transition-transform duration-500 hover:scale-105">
+                    </div>
+                    <h3 class="font-serif text-xl font-bold text-neutral-900 mb-3">Bollywood</h3>
+                    <p class="text-neutral-500 text-sm leading-relaxed">
+                        A vibrant and entertaining dance style that blends Indian classical, folk, and modern dance with expressive storytelling and energetic music.
+                    </p>
+                </div>
+
+                <div class="bg-white border border-[#D4AF37]/20 p-6 rounded-sm transition-all duration-300 hover:border-[#D4AF37] gold-border-glow flex flex-col items-center text-center">
+                    <!-- Image container with auto-height and contain layout to prevent cropping -->
+                    <div class="w-full mb-6 border border-neutral-100 rounded-sm bg-[#FDFBF7] flex items-center justify-center overflow-hidden">
+                        <img src="assets/Kuchipudi.png" alt="Western" class="w-full h-auto object-contain transition-transform duration-500 hover:scale-105">
+                    </div>
+                    <h3 class="font-serif text-xl font-bold text-neutral-900 mb-3">Kuchipudi</h3>
+                    <p class="text-neutral-500 text-sm leading-relaxed">
+                        A traditional Indian classical dance style that combines graceful movements, expressive facial expressions, rhythmic footwork, and dramatic storytelling.
+                    </p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Benefits of Learning Dance -->
+        <section class="py-20 bg-neutral-50 border-y border-[#D4AF37]/15">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="text-center space-y-4 mb-16">
+                    <span class="text-xs uppercase tracking-widest text-[#D4AF37] font-bold">Development</span>
+                    <h2 class="font-serif text-3xl font-bold text-neutral-900">Benefits of Learning Dance</h2>
+                    <div class="w-12 h-0.5 bg-[#D4AF37] mx-auto"></div>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+                    <div class="bg-white border border-[#D4AF37]/10 p-6 rounded-sm flex items-start gap-4">
+                        <span class="text-[#D4AF37] font-serif text-2xl font-bold mt-1">01</span>
+                        <div>
+                            <h4 class="font-serif font-bold text-neutral-900 mb-1">Improves Physical Fitness</h4>
+                            <p class="text-xs text-neutral-500 leading-relaxed">Builds strength, cardiorespiratory endurance, and general bodily coordination.</p>
+                        </div>
+                    </div>
+                    <div class="bg-white border border-[#D4AF37]/10 p-6 rounded-sm flex items-start gap-4">
+                        <span class="text-[#D4AF37] font-serif text-2xl font-bold mt-1">02</span>
+                        <div>
+                            <h4 class="font-serif font-bold text-neutral-900 mb-1">Boosts Self Confidence</h4>
+                            <p class="text-xs text-neutral-500 leading-relaxed">Empowers individuals through stage performance and physical self-awareness.</p>
+                        </div>
+                    </div>
+                    <div class="bg-white border border-[#D4AF37]/10 p-6 rounded-sm flex items-start gap-4">
+                        <span class="text-[#D4AF37] font-serif text-2xl font-bold mt-1">03</span>
+                        <div>
+                            <h4 class="font-serif font-bold text-neutral-900 mb-1">Enhances Creativity</h4>
+                            <p class="text-xs text-neutral-500 leading-relaxed">Nurtures artistic interpretation and choreographic imagination.</p>
+                        </div>
+                    </div>
+                    <div class="bg-white border border-[#D4AF37]/10 p-6 rounded-sm flex items-start gap-4">
+                        <span class="text-[#D4AF37] font-serif text-2xl font-bold mt-1">04</span>
+                        <div>
+                            <h4 class="font-serif font-bold text-neutral-900 mb-1">Develops Discipline</h4>
+                            <p class="text-xs text-neutral-500 leading-relaxed">Teaches goal-oriented focus and consistent training behaviors.</p>
+                        </div>
+                    </div>
+                    <div class="bg-white border border-[#D4AF37]/10 p-6 rounded-sm flex items-start gap-4">
+                        <span class="text-[#D4AF37] font-serif text-2xl font-bold mt-1">05</span>
+                        <div>
+                            <h4 class="font-serif font-bold text-neutral-900 mb-1">Improves Flexibility</h4>
+                            <p class="text-xs text-neutral-500 leading-relaxed">Refines motion parameters and joints flexibility through routine warmups.</p>
+                        </div>
+                    </div>
+                    <div class="bg-white border border-[#D4AF37]/10 p-6 rounded-sm flex items-start gap-4">
+                        <span class="text-[#D4AF37] font-serif text-2xl font-bold mt-1">06</span>
+                        <div>
+                            <h4 class="font-serif font-bold text-neutral-900 mb-1">Reduces Stress</h4>
+                            <p class="text-xs text-neutral-500 leading-relaxed">Acts as a creative escape releasing positive endorphins through physical play.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="gold-gradient-bg py-20 text-center border-b border-[#D4AF37]/15">
+            <div class="max-w-4xl mx-auto px-6 space-y-6">
+                <h2 class="font-serif text-3xl sm:text-4xl font-bold text-neutral-900">Ready to Dance?</h2>
+                <p class="text-neutral-600 text-base max-w-xl mx-auto">
+                    Join our academy today and begin your dance journey under professional training.
+                </p>
+                <div class="pt-4">
+                    <a href="Admission.html" class="px-10 py-3.5 bg-[#D4AF37] text-white font-bold tracking-wider uppercase text-sm rounded-full hover:bg-[#AA823B] transition-all duration-300 shadow-sm shadow-[#D4AF37]/10">Apply Now</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="bg-white border-t border-[#D4AF37]/25 py-16">
+            <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-12 gap-12 text-sm text-neutral-600">
+                <div class="md:col-span-4 space-y-4">
+                    <h3 class="font-serif text-xl font-bold text-neutral-900">Vishu's <span class="text-[#D4AF37]">Dance Academy</span></h3>
+                    <p class="leading-relaxed">Educating and inspiring passionate dancers through grace, discipline, and artistic performance.</p>
+                    
+                </div>
+                <div class="md:col-span-4 space-y-4">
+                    <h4 class="font-serif text-base font-bold text-neutral-900">Contact Details</h4>
+                    <p><b>Email:</b> <a href="mailto:vishu@danceacad.com" class="hover:text-[#D4AF37]">vishu@danceacad.com</a></p>
+                    <p><b>Phone:</b> <a href="tel:+919876543210" class="hover:text-[#D4AF37]">+91 98765 43210</a></p>
+                    <p><b>Address:</b> Madurai, Tamil Nadu, India</p>
+                </div>
+                <div class="md:col-span-4 space-y-4">
+                    <h4 class="font-serif text-base font-bold text-neutral-900">Stay Updated</h4>
+                    <p>Subscribe to our seasonal newsletters and auditions announcements.</p>
+                    <form action="#" method="post" class="flex gap-2">
+                        <input type="email" placeholder="Your email address" class="w-full px-4 py-2 border border-[#D4AF37]/30 rounded-full focus:outline-none focus:border-[#D4AF37] text-sm" required>
+                        <button type="submit" class="px-4 py-2 bg-[#D4AF37] text-white font-bold hover:bg-[#AA823B] rounded-full transition-colors">Subscribe</button>
+                    </form>
+                    <div class="flex items-center gap-4 pt-2">
+                        <a href="https://www.youtube.com/" target="_blank" class="hover:text-[#D4AF37] font-semibold text-xs tracking-wider uppercase">YouTube</a>
+                        <span class="text-neutral-300">|</span>
+                        <a href="https://www.instagram.com/?hl=en" target="_blank" class="hover:text-[#D4AF37] font-semibold text-xs tracking-wider uppercase">Instagram</a>
+                    </div>
+                </div>
+            </div>
+            <div class="max-w-7xl mx-auto px-6 mt-12 pt-6 border-t border-[#D4AF37]/10 flex flex-col items-center gap-4 text-xs">
+                <div class="flex items-center gap-4">
+                    <a href="terms.html" class="hover:text-[#D4AF37] font-semibold">Terms & Conditions</a>
+                    <span class="text-neutral-300">|</span>
+                    <a href="privacy.html" class="hover:text-[#D4AF37] font-semibold">Privacy Policy</a>
+                </div>
+                <p class="text-neutral-400 font-semibold text-center">&copy; 2026 Vishu's Dance Academy. All Rights Reserved.</p>
+            </div>
+        </footer>
+
+    </body>
+</html>

@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Admission - Vishu's Dance Academy</title>
+        <!-- Tailwind CSS v4 Play CDN -->
+        <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+        <!-- Google Fonts: Playfair Display & Plus Jakarta Sans -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+        
+                <!-- Javascript to Toggle Forms, Validate Inputs & Handle Submissions -->
+        <script>
+            // 1. Toggle between Student and Trainer Forms
+            function showForm(formType) {
+                const studentForm = document.getElementById('student-form-container');
+                const trainerForm = document.getElementById('trainer-form-container');
+                const studentTab = document.getElementById('student-tab');
+                const trainerTab = document.getElementById('trainer-tab');
+
+                if (formType === 'student') {
+                    studentForm.classList.remove('hidden');
+                    trainerForm.classList.add('hidden');
+                    studentTab.classList.add('bg-[#D4AF37]', 'text-white');
+                    studentTab.classList.remove('text-[#D4AF37]', 'hover:bg-[#FDFBF7]');
+                    trainerTab.classList.remove('bg-[#D4AF37]', 'text-white');
+                    trainerTab.classList.add('text-[#D4AF37]', 'hover:bg-[#FDFBF7]');
+                } else {
+                    studentForm.classList.add('hidden');
+                    trainerForm.classList.remove('hidden');
+                    trainerTab.classList.add('bg-[#D4AF37]', 'text-white');
+                    trainerTab.classList.remove('text-[#D4AF37]', 'hover:bg-[#FDFBF7]');
+                    studentTab.classList.remove('bg-[#D4AF37]', 'text-white');
+                    studentTab.classList.add('text-[#D4AF37]', 'hover:bg-[#FDFBF7]');
+                }
+            }
+
+            // 2. Custom Input Validation Function
+            function validateFormInputs(formElement) {
+                // Find fields within the specific form
+                const nameInput = formElement.querySelector('input[type="text"]');
+                const emailInput = formElement.querySelector('input[type="email"]');
+                const phoneInput = formElement.querySelector('input[type="tel"]');
+
+                // Name validation (minimum 3 characters, letters and spaces only)
+                if (nameInput) {
+                    const nameValue = nameInput.value.trim();
+                    const nameRegex = /^[a-zA-Z\s]{3,}$/;
+                    if (!nameRegex.test(nameValue)) {
+                        alert("Invalid Name: Please enter at least 3 characters containing only letters and spaces.");
+                        nameInput.focus();
+                        return false;
+                    }
+                }
+
+                // Phone validation (exactly 10 digits)
+                if (phoneInput) {
+                    const phoneValue = phoneInput.value.trim();
+                    const phoneRegex = /^[6-9]\d{9}$/; // Starts with 6,7,8,9 and has 10 digits
+                    if (!phoneRegex.test(phoneValue)) {
+                        alert("Invalid Phone Number: Please enter a valid 10-digit mobile number.");
+                        phoneInput.focus();
+                        return false;
+                    }
+                }
+
+                // Email validation (standard email regex)
+                if (emailInput) {
+                    const emailValue = emailInput.value.trim();
+                    const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+                    if (!emailRegex.test(emailValue)) {
+                        alert("Invalid Email: Please enter a valid email address.");
+                        emailInput.focus();
+                        return false;
+                    }
+                }
+
+                return true; // All validations passed
+            }
+
+            // 3. Intercept Form Submissions
+            document.addEventListener('DOMContentLoaded', () => {
+                const studentFormEl = document.querySelector('#student-form-container form');
+                const trainerFormEl = document.querySelector('#trainer-form-container form');
+
+                if (studentFormEl) {
+                    studentFormEl.addEventListener('submit', (e) => {
+                        e.preventDefault(); // Stop standard submit redirection
+
+                        // Run validation
+                        if (validateFormInputs(studentFormEl)) {
+                            alert("Registration Successful! Welcome to Vishu's Dance Academy.");
+                            studentFormEl.reset(); // Reset form inputs
+                        }
+                    });
+                }
+
+                if (trainerFormEl) {
+                    trainerFormEl.addEventListener('submit', (e) => {
+                        e.preventDefault(); // Stop standard submit redirection
+
+                        // Run validation
+                        if (validateFormInputs(trainerFormEl)) {
+                            alert("Application Submitted! Our recruitment team will review your profile and get back to you shortly.");
+                            trainerFormEl.reset(); // Reset form inputs
+                        }
+                    });
+                }
+            });
+        </script>
+
+        <style type="text/tailwindcss">
+            :root {
+                --font-serif: 'Playfair Display', serif;
+                --font-sans: 'Plus Jakarta Sans', sans-serif;
+            }
+            .gold-gradient-bg {
+                background: linear-gradient(135deg, #FBF8F3 0%, #FFFFFF 100%);
+            }
+            .gold-border-glow:hover {
+                box-shadow: 0 0 15px rgba(212, 175, 55, 0.15);
+            }
+        </style>
+    </head>
+    <body class="bg-white text-neutral-800 font-sans antialiased">
+        
+        <!-- Header & Navigation -->
+        <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-[#D4AF37]/20 shadow-xs">
+            <div class="max-w-7xl mx-auto px-6 py-4 flex flex-row items-center justify-between gap-4">
+                <!-- Title / Logo -->
+                <h1 class="flex items-center gap-2 font-serif text-base sm:text-lg lg:text-2xl font-bold tracking-wide text-neutral-900 shrink-0">
+                    <img src="assets/Profile_img.png" width="30" alt="Vishu's Dance Academy Logo" class="object-contain">
+                    Vishu's <span class="text-[#D4AF37]">Dance Academy</span>
+                </h1>
+                
+                <!-- Navbar Links & Smaller Buttons -->
+                <nav class="flex items-center gap-x-2 sm:gap-x-3 lg:gap-x-4 text-[11px] lg:text-sm font-semibold tracking-wider uppercase text-neutral-600 whitespace-nowrap overflow-x-auto md:overflow-visible">
+                    <a href="index.html" class="hover:text-[#D4AF37] transition-colors">Home</a>
+                    <a href="About.html" class="hover:text-[#D4AF37] transition-colors">About Us</a>
+                    <a href="DanceStyle.html" class="hover:text-[#D4AF37] transition-colors">Dance Styles</a>
+                    <a href="Admission.html" class="text-[#D4AF37] hover:text-[#AA823B] transition-colors">Admission</a>
+                    <a href="Gallery.html" class="hover:text-[#D4AF37] transition-colors">Gallery</a>
+                    <a href="Events.html" class="hover:text-[#D4AF37] transition-colors">Events</a>
+                    <a href="Contact.html" class="hover:text-[#D4AF37] transition-colors">Contact</a>
+                    <a href="faq.html" class="hover:text-[#D4AF37] transition-colors">FAQ</a>
+                    <a href="Login.html" class="ml-1 px-2.5 py-1 text-[10px] lg:text-xs border border-[#D4AF37] text-[#D4AF37] rounded-full hover:bg-[#D4AF37] hover:text-white transition-all duration-300">Login</a>
+                    <a href="Sign.html" class="px-2.5 py-1 text-[10px] lg:text-xs bg-[#D4AF37] text-white rounded-full hover:bg-[#AA823B] transition-all duration-300 shadow-sm shadow-[#D4AF37]/10">Sign Up</a>
+                </nav>
+            </div>
+        </header>
+
+        <!-- Title Section -->
+        <section class="gold-gradient-bg py-12 border-b border-[#D4AF37]/15">
+            <div class="max-w-4xl mx-auto px-6 text-center space-y-3">
+                <span class="text-xs uppercase tracking-widest text-[#D4AF37] font-bold">Registration Portal</span>
+                <h2 class="font-serif text-3xl font-bold text-neutral-900">Admission & Recruitment</h2>
+                <div class="w-12 h-0.5 bg-[#D4AF37] mx-auto"></div>
+                <p class="text-neutral-600 text-sm max-w-xl mx-auto">
+                    Please select your registration type below to complete the enrollment or application form.
+                </p>
+            </div>
+        </section>
+
+        <!-- Form Card Container -->
+        <section class="py-16 bg-neutral-50/50">
+            <div class="max-w-xl mx-auto px-6 space-y-8">
+                
+                <!-- Tab Controls -->
+                <div class="flex border border-[#D4AF37]/35 rounded-sm overflow-hidden bg-white shadow-xs">
+                    <button id="student-tab" onclick="showForm('student')" class="flex-1 py-3 text-center font-serif font-bold text-sm tracking-wide bg-[#D4AF37] text-white transition-all duration-300 cursor-pointer focus:outline-none">
+                        Student Admission
+                    </button>
+                    <button id="trainer-tab" onclick="showForm('trainer')" class="flex-1 py-3 text-center font-serif font-bold text-sm tracking-wide text-[#D4AF37] border-l border-[#D4AF37]/35 hover:bg-[#FDFBF7] transition-all duration-300 cursor-pointer focus:outline-none">
+                        Trainer Application
+                    </button>
+                </div>
+
+                <!-- FORM 1: Student Admission Form -->
+                <div id="student-form-container" class="bg-white border border-[#D4AF37]/25 p-8 sm:p-10 rounded-sm shadow-md transition-all duration-300">
+                    <h3 class="font-serif text-xl font-bold text-center text-neutral-900 mb-8 tracking-wide">Student Registration</h3>
+                    
+                    <form action="index.html" method="get" class="space-y-6 text-sm text-neutral-700">
+                        
+                        <!-- Full Name -->
+                        <div class="flex flex-col space-y-1.5">
+                            <label class="font-semibold text-neutral-800">Full Name</label>
+                            <input type="text" placeholder="Enter full name" class="w-full px-4 py-2 border border-neutral-300 rounded-sm focus:outline-none focus:border-[#D4AF37] focus:ring-1 focus:ring-[#D4AF37] transition-all" required>
+                        </div>
+                        
+                        <!-- Age -->
+                        <div class="flex flex-col space-y-1.5">
+                            <label class="font-semibold text-neutral-800">Age</label>
+                            <input type="number" placeholder="Enter age" class="w-full px-4 py-2 border border-neutral-300 rounded-sm focus:outline-none focus:border-[#D4AF37] focus:ring-1 focus:ring-[#D4AF37] transition-all" required min="5">
+                        </div>
+
+                        <!-- Gender -->
+                        <div class="space-y-2">
+                            <label class="font-semibold text-neutral-800 block">Gender</label>
+                            <div class="flex items-center gap-6">
+                                <label class="flex items-center gap-2 cursor-pointer">
+                                    <input type="radio" name="student_gender" class="accent-[#D4AF37]" required> Male
+                                </label>
+                                <label class="flex items-center gap-2 cursor-pointer">
+                                    <input type="radio" name="student_gender" class="accent-[#D4AF37]" required> Female
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Phone Number -->
+                        <div class="flex flex-col space-y-1.5">
+                            <label class="font-semibold text-neutral-800">Phone Number</label>
+                            <input type="tel" placeholder="Enter phone number" class="w-full px-4 py-2 border border-neutral-300 rounded-sm focus:outline-none focus:border-[#D4AF37] focus:ring-1 focus:ring-[#D4AF37] transition-all" required>
+                        </div>
+
+                        <!-- Email -->
+                        <div class="flex flex-col space-y-1.5">
+                            <label class="font-semibold text-neutral-800">Email Address</label>
+                            <input type="email" placeholder="Enter email" class="w-full px-4 py-2 border border-neutral-300 rounded-sm focus:outline-none focus:border-[#D4AF37] focus:ring-1 focus:ring-[#D4AF37] transition-all" required>
+                        </div>
+
+                        <!-- Select Dance Style -->
+                        <div class="flex flex-col space-y-1.5">
+                            <label class="font-semibold text-neutral-800">Select Dance Style</label>
+                            <select class="w-full px-4 py-2 border border-neutral-300 rounded-sm focus:outline-none focus:border-[#D4AF37] focus:ring-1 focus:ring-[#D4AF37] bg-white transition-all" required>
+                                <option value="" disabled selected>Choose style...</option>
+                                <option>Bharatanatyam</option>
+                                <option>Hip Hop</option>
+                                <option>Western</option>
+                                <option>Salsa</option>
+                            </select>
+                        </div>
+
+                        <!-- Preferred Batch -->
+                        <div class="space-y-2">
+                            <label class="font-semibold text-neutral-800 block">Preferred Batch</label>
+                            <div class="flex items-center gap-6">
+                                <label class="flex items-center gap-2 cursor-pointer">
+                                    <input type="radio" name="student_batch" class="accent-[#D4AF37]" required> Morning Batch
+                                </label>
+                                <label class="flex items-center gap-2 cursor-pointer">
+                                    <input type="radio" name="student_batch" class="accent-[#D4AF37]" required> Evening Batch
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Address -->
+                        <div class="flex flex-col space-y-1.5">
+                            <label class="font-semibold text-neutral-800">Address</label>
+                            <textarea rows="4" placeholder="Enter full address" class="w-full px-4 py-2 border border-neutral-300 rounded-sm focus:outline-none focus:border-[#D4AF37] focus:ring-1 focus:ring-[#D4AF37] transition-all" required></textarea>
+                        </div>
+
+                        <!-- Terms Agreement -->
+                        <label class="flex items-start gap-2.5 cursor-pointer select-none py-2 text-xs">
+                            <input type="checkbox" class="accent-[#D4AF37] mt-0.5" required>
+                            <span>I agree to the Terms and Conditions of Vishu's Dance Academy.</span>
+                        </label>
+
+                        <!-- Buttons -->
+                        <div class="flex items-center gap-4 pt-4">
+                            <input type="submit" value="Submit Registration" class="flex-1 px-2 py-2.5 bg-[#D4AF37] text-white font-bold tracking-wider uppercase text-xs rounded-full hover:bg-[#AA823B] transition-colors cursor-pointer shadow-sm">
+                            <input type="reset" value="Clear Form" class="px-2 py-2.5 border border-[#D4AF37] text-[#D4AF37] font-bold tracking-wider uppercase text-xs rounded-full hover:bg-[#D4AF37] hover:text-white transition-colors cursor-pointer">
+                        </div>
+
+                    </form>
+                </div>
+
+                <!-- FORM 2: Trainer Recruitment Form (Hidden by default) -->
+                <div id="trainer-form-container" class="bg-white border border-[#D4AF37]/25 p-8 sm:p-10 rounded-sm shadow-md transition-all duration-300 hidden">
+                    <h3 class="font-serif text-xl font-bold text-center text-neutral-900 mb-8 tracking-wide">Trainer Application</h3>
+                    
+                    <form action="index.html" method="get" class="space-y-6 text-sm text-neutral-700">
+                        
+                        <!-- Full Name -->
+                        <div class="flex flex-col space-y-1.5">
+                            <label class="font-semibold text-neutral-800">Full Name</label>
+                            <input type="text" placeholder="Enter full name" class="w-full px-4 py-2 border border-neutral-300 rounded-sm focus:outline-none focus:border-[#D4AF37] focus:ring-1 focus:ring-[#D4AF37] transition-all" required>
+                        </div>
+                        
+                        <!-- Age -->
+                        <div class="flex flex-col space-y-1.5">
+                            <label class="font-semibold text-neutral-800">Age</label>
+                            <input type="number" placeholder="Enter age" class="w-full px-4 py-2 border border-neutral-300 rounded-sm focus:outline-none focus:border-[#D4AF37] focus:ring-1 focus:ring-[#D4AF37] transition-all" required min="18">
+                        </div>
+
+                        <!-- Gender -->
+                        <div class="space-y-2">
+                            <label class="font-semibold text-neutral-800 block">Gender</label>
+                            <div class="flex items-center gap-6">
+                                <label class="flex items-center gap-2 cursor-pointer">
+                                    <input type="radio" name="trainer_gender" class="accent-[#D4AF37]" required> Male
+                                </label>
+                                <label class="flex items-center gap-2 cursor-pointer">
+                                    <input type="radio" name="trainer_gender" class="accent-[#D4AF37]" required> Female
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Phone Number -->
+                        <div class="flex flex-col space-y-1.5">
+                            <label class="font-semibold text-neutral-800">Phone Number</label>
+                            <input type="tel" placeholder="Enter phone number" class="w-full px-4 py-2 border border-neutral-300 rounded-sm focus:outline-none focus:border-[#D4AF37] focus:ring-1 focus:ring-[#D4AF37] transition-all" required>
+                        </div>
+
+                        <!-- Email -->
+                        <div class="flex flex-col space-y-1.5">
+                            <label class="font-semibold text-neutral-800">Email Address</label>
+                            <input type="email" placeholder="Enter email" class="w-full px-4 py-2 border border-neutral-300 rounded-sm focus:outline-none focus:border-[#D4AF37] focus:ring-1 focus:ring-[#D4AF37] transition-all" required>
+                        </div>
+
+                        <!-- Years of Experience -->
+                        <div class="flex flex-col space-y-1.5">
+                            <label class="font-semibold text-neutral-800">Years of Experience</label>
+                            <input type="number" placeholder="Enter years of coaching experience" class="w-full px-4 py-2 border border-neutral-300 rounded-sm focus:outline-none focus:border-[#D4AF37] focus:ring-1 focus:ring-[#D4AF37] transition-all" required min="1">
+                        </div>
+
+                        <!-- Dance Specialization -->
+                        <div class="flex flex-col space-y-1.5">
+                            <label class="font-semibold text-neutral-800">Select Core Specialization</label>
+                            <select class="w-full px-4 py-2 border border-neutral-300 rounded-sm focus:outline-none focus:border-[#D4AF37] focus:ring-1 focus:ring-[#D4AF37] bg-white transition-all" required>
+                                <option value="" disabled selected>Choose style...</option>
+                                <option>Bharatanatyam</option>
+                                <option>Hip Hop</option>
+                                <option>Western</option>
+                                <option>Salsa</option>
+                                <option>Other / Contemporary</option>
+                            </select>
+                        </div>
+
+                        <!-- Past Experience / Brief Resume -->
+                        <div class="flex flex-col space-y-1.5">
+                            <label class="font-semibold text-neutral-800">Brief Experience & Accomplishments</label>
+                            <textarea rows="4" placeholder="Briefly describe your training and previous teaching experience..." class="w-full px-4 py-2 border border-neutral-300 rounded-sm focus:outline-none focus:border-[#D4AF37] focus:ring-1 focus:ring-[#D4AF37] transition-all" required></textarea>
+                        </div>
+
+                        <!-- Terms Agreement -->
+                        <label class="flex items-start gap-2.5 cursor-pointer select-none py-2 text-xs">
+                            <input type="checkbox" class="accent-[#D4AF37] mt-0.5" required>
+                            <span>I certify that all provided details are true and correct.</span>
+                        </label>
+
+                        <!-- Buttons -->
+                        <div class="flex items-center gap-4 pt-4">
+                            <input type="submit" value="Submit Application" class="flex-1 px-2 py-2.5 bg-[#D4AF37] text-white font-bold tracking-wider uppercase text-xs rounded-full hover:bg-[#AA823B] transition-colors cursor-pointer shadow-sm">
+                            <input type="reset" value="Clear Form" class="px-2 py-2.5 border border-[#D4AF37] text-[#D4AF37] font-bold tracking-wider uppercase text-xs rounded-full hover:bg-[#D4AF37] hover:text-white transition-colors cursor-pointer">
+                        </div>
+
+                    </form>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="bg-white border-t border-[#D4AF37]/25 py-16">
+            <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-12 gap-12 text-sm text-neutral-600">
+                <div class="md:col-span-4 space-y-4">
+                    <h3 class="font-serif text-xl font-bold text-neutral-900">Vishu's <span class="text-[#D4AF37]">Dance Academy</span></h3>
+                    <p class="leading-relaxed">Educating and inspiring passionate dancers through grace, discipline, and artistic performance.</p>
+                </div>
+                <div class="md:col-span-4 space-y-4">
+                    <h4 class="font-serif text-base font-bold text-neutral-900">Contact Details</h4>
+                    <p><b>Email:</b> <a href="mailto:vishu@danceacad.com" class="hover:text-[#D4AF37]">vishu@danceacad.com</a></p>
+                    <p><b>Phone:</b> <a href="tel:+919876543210" class="hover:text-[#D4AF37]">+91 98765 43210</a></p>
+                    <p><b>Address:</b> Madurai, Tamil Nadu, India</p>
+                </div>
+                <div class="md:col-span-4 space-y-4">
+                    <h4 class="font-serif text-base font-bold text-neutral-900">Stay Updated</h4>
+                    <p>Subscribe to our seasonal newsletters and auditions announcements.</p>
+                    <form action="#" method="post" class="flex gap-2">
+                        <input type="email" placeholder="Your email address" class="w-full px-4 py-2 border border-[#D4AF37]/30 rounded-full focus:outline-none focus:border-[#D4AF37] text-sm" required>
+                        <button type="submit" class="px-4 py-2 bg-[#D4AF37] text-white font-bold hover:bg-[#AA823B] rounded-full transition-colors">Subscribe</button>
+                    </form>
+                    <div class="flex items-center gap-4 pt-2">
+                        <a href="https://www.youtube.com/" target="_blank" class="hover:text-[#D4AF37] font-semibold text-xs tracking-wider uppercase">YouTube</a>
+                        <span class="text-neutral-300">|</span>
+                        <a href="https://www.instagram.com/?hl=en" target="_blank" class="hover:text-[#D4AF37] font-semibold text-xs tracking-wider uppercase">Instagram</a>
+                    </div>
+                </div>
+            </div>
+            <div class="max-w-7xl mx-auto px-6 mt-12 pt-6 border-t border-[#D4AF37]/10 flex flex-col items-center gap-4 text-xs">
+                <div class="flex items-center gap-4">
+                    <a href="terms.html" class="hover:text-[#D4AF37] font-semibold">Terms & Conditions</a>
+                    <span class="text-neutral-300">|</span>
+                    <a href="privacy.html" class="hover:text-[#D4AF37] font-semibold">Privacy Policy</a>
+                </div>
+                <p class="text-neutral-400 font-semibold text-center">&copy; 2026 Vishu's Dance Academy. All Rights Reserved.</p>
+            </div>
+        </footer>
+
+        <!-- Javascript to Toggle Forms -->
+        <script>
+            function showForm(formType) {
+                const studentForm = document.getElementById('student-form-container');
+                const trainerForm = document.getElementById('trainer-form-container');
+                const studentTab = document.getElementById('student-tab');
+                const trainerTab = document.getElementById('trainer-tab');
+
+                if (formType === 'student') {
+                    // Show Student Form, Hide Trainer Form
+                    studentForm.classList.remove('hidden');
+                    trainerForm.classList.add('hidden');
+                    // Style Active Student Tab
+                    studentTab.classList.add('bg-[#D4AF37]', 'text-white');
+                    studentTab.classList.remove('text-[#D4AF37]', 'hover:bg-[#FDFBF7]');
+                    // Style Inactive Trainer Tab
+                    trainerTab.classList.remove('bg-[#D4AF37]', 'text-white');
+                    trainerTab.classList.add('text-[#D4AF37]', 'hover:bg-[#FDFBF7]');
+                } else {
+                    // Show Trainer Form, Hide Student Form
+                    studentForm.classList.add('hidden');
+                    trainerForm.classList.remove('hidden');
+                    // Style Active Trainer Tab
+                    trainerTab.classList.add('bg-[#D4AF37]', 'text-white');
+                    trainerTab.classList.remove('text-[#D4AF37]', 'hover:bg-[#FDFBF7]');
+                    // Style Inactive Student Tab
+                    studentTab.classList.remove('bg-[#D4AF37]', 'text-white');
+                    studentTab.classList.add('text-[#D4AF37]', 'hover:bg-[#FDFBF7]');
+                }
+            }
+        </script>
+
+    </body>
+</html>

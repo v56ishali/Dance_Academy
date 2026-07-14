@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>About Us - Vishu's Dance Academy</title>
+        <!-- Tailwind CSS v4 Play CDN -->
+        <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+        <!-- Google Fonts: Playfair Display & Plus Jakarta Sans -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+        
+        <style type="text/tailwindcss">
+            :root {
+                --font-serif: 'Playfair Display', serif;
+                --font-sans: 'Plus Jakarta Sans', sans-serif;
+            }
+            .gold-gradient-bg {
+                background: linear-gradient(135deg, #FBF8F3 0%, #FFFFFF 100%);
+            }
+            .gold-border-glow:hover {
+                box-shadow: 0 0 15px rgba(212, 175, 55, 0.15);
+            }
+        </style>
+    </head>
+    <body class="bg-white text-neutral-800 font-sans antialiased">
+        
+        <!-- Header & Navigation -->
+        <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-[#D4AF37]/20 shadow-xs">
+            <div class="max-w-7xl mx-auto px-6 py-4 flex flex-row items-center justify-between gap-4">
+                <!-- Title / Logo -->
+                <h1 class="flex items-center gap-2 font-serif text-base sm:text-lg lg:text-2xl font-bold tracking-wide text-neutral-900 shrink-0">
+                    <img src="assets/Profile_img.png" width="30" alt="Vishu's Dance Academy Logo" class="object-contain">
+                    Vishu's <span class="text-[#D4AF37]">Dance Academy</span>
+                </h1>
+                
+                <!-- Navbar Links & Smaller Buttons -->
+                <nav class="flex items-center gap-x-2 sm:gap-x-3 lg:gap-x-4 text-[11px] lg:text-sm font-semibold tracking-wider uppercase text-neutral-600 whitespace-nowrap overflow-x-auto md:overflow-visible">
+                    <a href="index.html" class="hover:text-[#D4AF37] transition-colors">Home</a>
+                    <a href="About.html" class="text-[#D4AF37] hover:text-[#AA823B] transition-colors">About Us</a>
+                    <a href="DanceStyle.html" class="hover:text-[#D4AF37] transition-colors">Dance Styles</a>
+                    <a href="Admission.html" class="hover:text-[#D4AF37] transition-colors">Admission</a>
+                    <a href="Gallery.html" class="hover:text-[#D4AF37] transition-colors">Gallery</a>
+                    <a href="Events.html" class="hover:text-[#D4AF37] transition-colors">Events</a>
+                    <a href="Contact.html" class="hover:text-[#D4AF37] transition-colors">Contact</a>
+                    <a href="faq.html" class="hover:text-[#D4AF37] transition-colors">FAQ</a>
+                    <a href="Login.html" class="ml-1 px-2.5 py-1 text-[10px] lg:text-xs border border-[#D4AF37] text-[#D4AF37] rounded-full hover:bg-[#D4AF37] hover:text-white transition-all duration-300">Login</a>
+                    <a href="Sign.html" class="px-2.5 py-1 text-[10px] lg:text-xs bg-[#D4AF37] text-white rounded-full hover:bg-[#AA823B] transition-all duration-300 shadow-sm shadow-[#D4AF37]/10">Sign Up</a>
+                </nav>
+            </div>
+        </header>
+
+        <!-- Title / Quote Section -->
+        <section class="gold-gradient-bg border-b border-[#D4AF37]/15">
+            <!-- 1. FULL BLEED IMAGE (No borders, padding, or side margins) -->
+            <div class="w-full">
+                <img src="assets/About.png" alt="About Vishu Academy" class="w-full h-auto object-cover block">
+            </div>
+
+            <!-- Content Container (Padding applied here now that the image is first) -->
+            <div class="max-w-4xl mx-auto px-6 py-16 text-center space-y-10">
+                <!-- 2. ARTISTIC INSPIRATION & QUOTE (Moved below the image) -->
+                <div class="space-y-4">
+                    <span class="text-xs uppercase tracking-widest text-[#D4AF37] font-bold">Artistic Inspiration</span>
+                    <blockquote class="font-serif text-3xl sm:text-4xl lg:text-5xl italic font-bold text-neutral-900 leading-normal">
+                        "Every great dancer was once a beginner."
+                    </blockquote>
+                </div>
+                
+                <!-- 3. DESCRIPTION & BUTTON -->
+                <div class="space-y-6">
+                    <p class="text-neutral-600 text-lg max-w-2xl mx-auto leading-relaxed">
+                        Our Dance Academy was established with the vision of spreading the joy of dance among students of all ages. We provide professional training in various dance styles while encouraging creativity, confidence, discipline, and teamwork.
+                    </p>
+                    <div class="pt-4">
+                        <a href="DanceStyle.html" class="px-8 py-3 bg-[#D4AF37] text-white font-bold tracking-wider uppercase text-sm rounded-full hover:bg-[#AA823B] transition-all duration-300 shadow-sm">Explore Styles</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Mission & Vision -->
+        <section class="py-20 max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-12">
+                <!-- Mission Card -->
+                <div class="bg-white border border-[#D4AF37]/20 p-8 sm:p-10 rounded-sm hover:border-[#D4AF37] transition-all duration-300 gold-border-glow text-center space-y-6">
+                    <h3 class="font-serif text-2xl font-bold text-neutral-900">Our Mission</h3>
+                    <div class="relative w-24 h-24 mx-auto overflow-hidden border border-[#D4AF37]/35 rounded-full p-1 bg-[#FDFBF7]">
+                        <img src="assets/Mission.png" alt="Mission" class="w-full h-full object-cover rounded-full">
+                    </div>
+                    <p class="text-neutral-600 leading-relaxed text-sm">
+                        To provide quality dance education and help every student discover their potential, building technical precision alongside lifelong creative intelligence.
+                    </p>
+                </div>
+                <!-- Vision Card -->
+                <div class="bg-white border border-[#D4AF37]/20 p-8 sm:p-10 rounded-sm hover:border-[#D4AF37] transition-all duration-300 gold-border-glow text-center space-y-6">
+                    <h3 class="font-serif text-2xl font-bold text-neutral-900">Our Vision</h3>
+                    <div class="relative w-24 h-24 mx-auto overflow-hidden border border-[#D4AF37]/35 rounded-full p-1 bg-[#FDFBF7]">
+                        <img src="assets/Vision.png" alt="Vision" class="w-full h-full object-cover rounded-full">
+                    </div>
+                    <p class="text-neutral-600 leading-relaxed text-sm">
+                        To become one of the leading dance academies by producing confident, highly skilled, and passionate dancers who share movement joy globally.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Our Story -->
+        <section class="py-20 bg-neutral-50 border-y border-[#D4AF37]/15">
+            <div class="max-w-4xl mx-auto px-6 space-y-8">
+                <div class="text-center space-y-4">
+                    <span class="text-xs uppercase tracking-widest text-[#D4AF37] font-bold">Heritage</span>
+                    <h2 class="font-serif text-3xl sm:text-4xl font-bold text-neutral-900">Our Story</h2>
+                    <div class="w-12 h-0.5 bg-[#D4AF37] mx-auto"></div>
+                </div>
+                <p class="text-neutral-600 leading-relaxed text-center">
+                    At Vishu's Dance Academy, we believe that dance is more than just movement—it is a powerful form of self-expression, a builder of character, and a lifelong journey of growth. We are dedicated to creating an inclusive, nurturing environment where dancers of all ages and skill levels can feel safe to explore their potential, push their creative boundaries, and discover the unique rhythm within themselves. 
+                </p>
+                
+                <div class="grid sm:grid-cols-2 gap-6 pt-6">
+                    <div class="bg-white border border-[#D4AF37]/15 p-6 rounded-sm">
+                        <h4 class="font-serif text-lg font-bold text-neutral-900 mb-2 flex items-center gap-2"><span class="text-[#D4AF37]">&bull;</span> Creativity & Innovation</h4>
+                        <p class="text-xs text-neutral-500 leading-relaxed">We encourage students to think outside the box, experiment with choreography, and discover their unique artistic voice.</p>
+                    </div>
+                    <div class="bg-white border border-[#D4AF37]/15 p-6 rounded-sm">
+                        <h4 class="font-serif text-lg font-bold text-neutral-900 mb-2 flex items-center gap-2"><span class="text-[#D4AF37]">&bull;</span> Confidence & Resilience</h4>
+                        <p class="text-xs text-neutral-500 leading-relaxed">Through regular performance opportunities and constructive guidance, we build solid stage presence and emotional strength.</p>
+                    </div>
+                    <div class="bg-white border border-[#D4AF37]/15 p-6 rounded-sm">
+                        <h4 class="font-serif text-lg font-bold text-neutral-900 mb-2 flex items-center gap-2"><span class="text-[#D4AF37]">&bull;</span> Teamwork & Community</h4>
+                        <p class="text-xs text-neutral-500 leading-relaxed">Dancers collaborate with peers to support one another, forming lifelong friendships rooted in mutual support and shared passion.</p>
+                    </div>
+                    <div class="bg-white border border-[#D4AF37]/15 p-6 rounded-sm">
+                        <h4 class="font-serif text-lg font-bold text-neutral-900 mb-2 flex items-center gap-2"><span class="text-[#D4AF37]">&bull;</span> Discipline & Focus</h4>
+                        <p class="text-xs text-neutral-500 leading-relaxed">Consistency makes masters. We focus on physical health, dedication, consistency in training, and goal-setting.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Our Commitment -->
+        <section class="py-20 max-w-4xl mx-auto px-6 space-y-8">
+            <div class="text-center space-y-4">
+                <span class="text-xs uppercase tracking-widest text-[#D4AF37] font-bold">Responsibility</span>
+                <h2 class="font-serif text-3xl font-bold text-neutral-900">Our Commitment</h2>
+                <div class="w-12 h-0.5 bg-[#D4AF37] mx-auto"></div>
+            </div>
+            <p class="text-neutral-600 leading-relaxed text-center">
+                Whether you are a young beginner taking your first steps, an aspiring professional refining technique, or an adult returning to the joy of movement, we welcome you to our family. Our commitment extends directly to your long-term success:
+            </p>
+            <div class="space-y-4">
+                <div class="p-6 border border-[#D4AF37]/10 bg-[#FDFBF7]/30 rounded-sm">
+                    <p class="font-serif font-bold text-neutral-900 mb-1">Excellence in Education</p>
+                    <p class="text-xs text-neutral-500">We are committed to providing top-tier dance training. Our instructors bring years of industry expertise and pedagogical knowledge to every classroom session.</p>
+                </div>
+                <div class="p-6 border border-[#D4AF37]/10 bg-[#FDFBF7]/30 rounded-sm">
+                    <p class="font-serif font-bold text-neutral-900 mb-1">Individualized Attention</p>
+                    <p class="text-xs text-neutral-500">We realize every student learns differently. We structure our instruction feedback to target your unique skills and challenges individually.</p>
+                </div>
+                <div class="p-6 border border-[#D4AF37]/10 bg-[#FDFBF7]/30 rounded-sm">
+                    <p class="font-serif font-bold text-neutral-900 mb-1">Holistic Development</p>
+                    <p class="text-xs text-neutral-500">Mastery goes beyond physical technique. We foster life values—perseverance, healthy self-esteem, collaboration, and structured self-criticism—that endure.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why Choose Us & Our Facilities -->
+        <section class="py-20 bg-neutral-50 border-t border-[#D4AF37]/15">
+            <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12">
+                <!-- Why Choose Us -->
+                <div class="bg-white border border-[#D4AF37]/20 p-8 rounded-sm">
+                    <h3 class="font-serif text-2xl font-bold text-neutral-900 mb-6 pb-2 border-b border-[#D4AF37]/10">Why Choose Us?</h3>
+                    <ul class="space-y-4 text-neutral-600 text-sm">
+                        <li class="flex items-center gap-3">
+                            <span class="text-[#D4AF37] font-bold">&check;</span> Certified Instructors & Trainers
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <span class="text-[#D4AF37] font-bold">&check;</span> Personalized Support & Class Attention
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <span class="text-[#D4AF37] font-bold">&check;</span> Flexible Batch Curation & Class Timings
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <span class="text-[#D4AF37] font-bold">&check;</span> Professional Annual Stage Showcases
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <span class="text-[#D4AF37] font-bold">&check;</span> Friendly & Encouraging Learning Atmosphere
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Our Facilities -->
+                <div class="bg-white border border-[#D4AF37]/20 p-8 rounded-sm">
+                    <h3 class="font-serif text-2xl font-bold text-neutral-900 mb-6 pb-2 border-b border-[#D4AF37]/10">Our Studio Facilities</h3>
+                    <ul class="space-y-4 text-neutral-600 text-sm">
+                        <li class="flex items-center gap-3">
+                            <span class="text-[#D4AF37] font-bold">&check;</span> Highly Spacious Dance Studio Space
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <span class="text-[#D4AF37] font-bold">&check;</span> Premium Hi-Fi Sound & Acoustics
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <span class="text-[#D4AF37] font-bold">&check;</span> Fully Air Conditioned Studios
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <span class="text-[#D4AF37] font-bold">&check;</span> Dressing Rooms & Private Lockers
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <span class="text-[#D4AF37] font-bold">&check;</span> Dedicated Parking Space
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="bg-white border-t border-[#D4AF37]/25 py-16">
+            <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-12 gap-12 text-sm text-neutral-600">
+                
+                <div class="md:col-span-4 space-y-4">
+                    <h3 class="font-serif text-xl font-bold text-neutral-900">Vishu's <span class="text-[#D4AF37]">Dance Academy</span></h3>
+                    <p class="leading-relaxed">Educating and inspiring passionate dancers through grace, discipline, and artistic performance.</p>
+                    
+                </div>
+                
+                <div class="md:col-span-4 space-y-4">
+                    <h4 class="font-serif text-base font-bold text-neutral-900">Contact Details</h4>
+                    <p><b>Email:</b> <a href="mailto:vishu@danceacad.com" class="hover:text-[#D4AF37]">vishu@danceacad.com</a></p>
+                    <p><b>Phone:</b> <a href="tel:+919876543210" class="hover:text-[#D4AF37]">+91 98765 43210</a></p>
+                    <p><b>Address:</b> Madurai, Tamil Nadu, India</p>
+                </div>
+                
+                <div class="md:col-span-4 space-y-4">
+                    <h4 class="font-serif text-base font-bold text-neutral-900">Stay Updated</h4>
+                    <p>Subscribe to our seasonal newsletters and auditions announcements.</p>
+                    <form action="#" method="post" class="flex gap-2">
+                        <input type="email" placeholder="Your email address" class="w-full px-4 py-2 border border-[#D4AF37]/30 rounded-full focus:outline-none focus:border-[#D4AF37] text-sm" required>
+                        <button type="submit" class="px-4 py-2 bg-[#D4AF37] rounded-full text-white font-bold hover:bg-[#AA823B] transition-colors">Subscribe</button>
+                    </form>
+                    <div class="flex items-center gap-4 pt-2">
+                        <a href="https://www.youtube.com/" target="_blank" class="hover:text-[#D4AF37] font-semibold text-xs tracking-wider uppercase">YouTube</a>
+                        <span class="text-neutral-300">|</span>
+                        <a href="https://www.instagram.com/?hl=en" target="_blank" class="hover:text-[#D4AF37] font-semibold text-xs tracking-wider uppercase">Instagram</a>
+                    </div>
+                </div>
+            </div>
+            <div class="max-w-7xl mx-auto px-6 mt-12 pt-6 border-t border-[#D4AF37]/10 flex flex-col items-center gap-4 text-xs">
+                <div class="flex items-center gap-4">
+                    <a href="terms.html" class="hover:text-[#D4AF37] font-semibold">Terms & Conditions</a>
+                    <span class="text-neutral-300">|</span>
+                    <a href="privacy.html" class="hover:text-[#D4AF37] font-semibold">Privacy Policy</a>
+                </div>
+                <p class="text-neutral-400 font-semibold text-center">&copy; 2026 Vishu's Dance Academy. All Rights Reserved.</p>
+            </div>
+        </footer>
+
+    </body>
+</html>

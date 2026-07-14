@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>FAQ - Vishu's Dance Academy</title>
+        <!-- Tailwind CSS v4 Play CDN -->
+        <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+        <!-- Google Fonts: Playfair Display & Plus Jakarta Sans -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+        
+        <style type="text/tailwindcss">
+            :root {
+                --font-serif: 'Playfair Display', serif;
+                --font-sans: 'Plus Jakarta Sans', sans-serif;
+            }
+            .gold-gradient-bg {
+                background: linear-gradient(135deg, #FBF8F3 0%, #FFFFFF 100%);
+            }
+            .gold-border-glow:hover {
+                box-shadow: 0 0 15px rgba(212, 175, 55, 0.15);
+            }
+        </style>
+    </head>
+    <body class="bg-white text-neutral-800 font-sans antialiased">
+        
+        <!-- Header & Navigation -->
+        <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-[#D4AF37]/20 shadow-xs">
+            <div class="max-w-7xl mx-auto px-6 py-4 flex flex-row items-center justify-between gap-4">
+                <!-- Title / Logo -->
+                <h1 class="flex items-center gap-2 font-serif text-base sm:text-lg lg:text-2xl font-bold tracking-wide text-neutral-900 shrink-0">
+                    <img src="assets/Profile_img.png" width="30" alt="Vishu's Dance Academy Logo" class="object-contain">
+                    Vishu's <span class="text-[#D4AF37]">Dance Academy</span>
+                </h1>
+                
+                <!-- Navbar Links & Smaller Buttons -->
+                <nav class="flex items-center gap-x-2 sm:gap-x-3 lg:gap-x-4 text-[11px] lg:text-sm font-semibold tracking-wider uppercase text-neutral-600 whitespace-nowrap overflow-x-auto md:overflow-visible">
+                    <a href="index.html" class="hover:text-[#D4AF37] transition-colors">Home</a>
+                    <a href="About.html" class="hover:text-[#D4AF37] transition-colors">About Us</a>
+                    <a href="DanceStyle.html" class="hover:text-[#D4AF37] transition-colors">Dance Styles</a>
+                    <a href="Admission.html" class="hover:text-[#D4AF37] transition-colors">Admission</a>
+                    <a href="Gallery.html" class="hover:text-[#D4AF37] transition-colors">Gallery</a>
+                    <a href="Events.html" class="hover:text-[#D4AF37] transition-colors">Events</a>
+                    <a href="Contact.html" class="hover:text-[#D4AF37] transition-colors">Contact</a>
+                    <a href="faq.html" class="text-[#D4AF37] hover:text-[#AA823B] transition-colors">FAQ</a>
+                    <a href="Login.html" class="ml-1 px-2.5 py-1 text-[10px] lg:text-xs border border-[#D4AF37] text-[#D4AF37] rounded-full hover:bg-[#D4AF37] hover:text-white transition-all duration-300">Login</a>
+                    <a href="Sign.html" class="px-2.5 py-1 text-[10px] lg:text-xs bg-[#D4AF37] text-white rounded-full hover:bg-[#AA823B] transition-all duration-300 shadow-sm shadow-[#D4AF37]/10">Sign Up</a>
+                </nav>
+            </div>
+        </header>
+
+        <!-- Title Section -->
+        <section class="gold-gradient-bg py-12 border-b border-[#D4AF37]/15">
+            <div class="max-w-4xl mx-auto px-6 text-center space-y-3">
+                <span class="text-xs uppercase tracking-widest text-[#D4AF37] font-bold">Help Center</span>
+                <h2 class="font-serif text-3xl font-bold text-neutral-900">Frequently Asked Questions</h2>
+                <div class="w-12 h-0.5 bg-[#D4AF37] mx-auto"></div>
+                <p class="text-neutral-600 text-sm max-w-xl mx-auto">
+                    Find quick answers to common queries regarding registration, batches, certificates, and costumes.
+                </p>
+            </div>
+        </section>
+
+        <!-- FAQ Accordions Container -->
+        <section class="py-16 max-w-3xl mx-auto px-6">
+            <div class="space-y-4">
+                
+                <!-- Q1 -->
+                <details class="group border border-[#D4AF37]/20 rounded-sm bg-white overflow-hidden transition-all duration-300 [&_summary::-webkit-details-marker]:hidden" open>
+                    <summary class="flex items-center justify-between p-5 cursor-pointer hover:bg-[#FDFBF7] select-none">
+                        <span class="font-serif font-bold text-neutral-900 group-open:text-[#D4AF37]">1. What is the minimum age to enroll?</span>
+                        <span class="transition group-open:rotate-180 text-[#D4AF37]">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+                        </span>
+                    </summary>
+                    <div class="p-5 border-t border-[#D4AF37]/10 bg-[#FDFBF7]/30 text-sm text-neutral-600 leading-relaxed">
+                        The minimum age for enrollment is <b>5 years and above</b>. We have batch divisions curated specifically to match age groups.
+                    </div>
+                </details>
+
+                <!-- Q2 -->
+                <details class="group border border-[#D4AF37]/20 rounded-sm bg-white overflow-hidden transition-all duration-300 [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex items-center justify-between p-5 cursor-pointer hover:bg-[#FDFBF7] select-none">
+                        <span class="font-serif font-bold text-neutral-900 group-open:text-[#D4AF37]">2. Do absolute beginners join your classes?</span>
+                        <span class="transition group-open:rotate-180 text-[#D4AF37]">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+                        </span>
+                    </summary>
+                    <div class="p-5 border-t border-[#D4AF37]/10 bg-[#FDFBF7]/30 text-sm text-neutral-600 leading-relaxed">
+                        <b>Yes, absolutely.</b> We divide our curriculum so that beginners are nurtured with basics before moving into intermediate choreography parameters.
+                    </div>
+                </details>
+
+                <!-- Q3 -->
+                <details class="group border border-[#D4AF37]/20 rounded-sm bg-white overflow-hidden transition-all duration-300 [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex items-center justify-between p-5 cursor-pointer hover:bg-[#FDFBF7] select-none">
+                        <span class="font-serif font-bold text-neutral-900 group-open:text-[#D4AF37]">3. Is there a certification program?</span>
+                        <span class="transition group-open:rotate-180 text-[#D4AF37]">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+                        </span>
+                    </summary>
+                    <div class="p-5 border-t border-[#D4AF37]/10 bg-[#FDFBF7]/30 text-sm text-neutral-600 leading-relaxed">
+                        <b>Yes.</b> Certificates of achievement are awarded to students upon successful evaluation and completion of their respective levels.
+                    </div>
+                </details>
+
+                <!-- Q4 -->
+                <details class="group border border-[#D4AF37]/20 rounded-sm bg-white overflow-hidden transition-all duration-300 [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex items-center justify-between p-5 cursor-pointer hover:bg-[#FDFBF7] select-none">
+                        <span class="font-serif font-bold text-neutral-900 group-open:text-[#D4AF37]">4. Do you provide performance costumes?</span>
+                        <span class="transition group-open:rotate-180 text-[#D4AF37]">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+                        </span>
+                    </summary>
+                    <div class="p-5 border-t border-[#D4AF37]/10 bg-[#FDFBF7]/30 text-sm text-neutral-600 leading-relaxed">
+                        <b>Yes.</b> Costumes and stage props are arranged by the academy administration for all group stage showcases and competitive performances.
+                    </div>
+                </details>
+
+                <!-- Q5 -->
+                <details class="group border border-[#D4AF37]/20 rounded-sm bg-white overflow-hidden transition-all duration-300 [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex items-center justify-between p-5 cursor-pointer hover:bg-[#FDFBF7] select-none">
+                        <span class="font-serif font-bold text-neutral-900 group-open:text-[#D4AF37]">5. How can I apply for admission?</span>
+                        <span class="transition group-open:rotate-180 text-[#D4AF37]">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+                        </span>
+                    </summary>
+                    <div class="p-5 border-t border-[#D4AF37]/10 bg-[#FDFBF7]/30 text-sm text-neutral-600 leading-relaxed">
+                        You can easily register by navigating to our online <a href="Admission.html" class="text-[#D4AF37] font-semibold hover:underline">Admission form</a>, filling out your details, and submitting it directly, or by visiting our studio in Madurai.
+                    </div>
+                </details>
+
+                <!-- Q6 -->
+                <details class="group border border-[#D4AF37]/20 rounded-sm bg-white overflow-hidden transition-all duration-300 [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex items-center justify-between p-5 cursor-pointer hover:bg-[#FDFBF7] select-none">
+                        <span class="font-serif font-bold text-neutral-900 group-open:text-[#D4AF37]">6. What is the duration of each dance style level?</span>
+                        <span class="transition group-open:rotate-180 text-[#D4AF37]">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+                        </span>
+                    </summary>
+                    <div class="p-5 border-t border-[#D4AF37]/10 bg-[#FDFBF7]/30 text-sm text-neutral-600 leading-relaxed">
+                        Course durations vary: <b>Beginner Level</b> is 3 Months, <b>Intermediate Level</b> is 6 Months, and <b>Advanced Level</b> is 1 Year.
+                    </div>
+                </details>
+
+                <!-- Q7 -->
+                <details class="group border border-[#D4AF37]/20 rounded-sm bg-white overflow-hidden transition-all duration-300 [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex items-center justify-between p-5 cursor-pointer hover:bg-[#FDFBF7] select-none">
+                        <span class="font-serif font-bold text-neutral-900 group-open:text-[#D4AF37]">7. Do you offer morning or evening batches?</span>
+                        <span class="transition group-open:rotate-180 text-[#D4AF37]">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+                        </span>
+                    </summary>
+                    <div class="p-5 border-t border-[#D4AF37]/10 bg-[#FDFBF7]/30 text-sm text-neutral-600 leading-relaxed">
+                        <b>Both.</b> We provide flexible batches, allowing you to select either a Morning or an Evening slot during your admission depending on your availability.
+                    </div>
+                </details>
+
+                <!-- Q8 -->
+                <details class="group border border-[#D4AF37]/20 rounded-sm bg-white overflow-hidden transition-all duration-300 [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex items-center justify-between p-5 cursor-pointer hover:bg-[#FDFBF7] select-none">
+                        <span class="font-serif font-bold text-neutral-900 group-open:text-[#D4AF37]">8. Can I enroll in multiple dance styles at the same time?</span>
+                        <span class="transition group-open:rotate-180 text-[#D4AF37]">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+                        </span>
+                    </summary>
+                    <div class="p-5 border-t border-[#D4AF37]/10 bg-[#FDFBF7]/30 text-sm text-neutral-600 leading-relaxed">
+                        <b>Yes.</b> You can register for multiple classes. However, for absolute beginners, we suggest starting with a single style to master foundational controls first.
+                    </div>
+                </details>
+
+                <!-- Q9 -->
+                <details class="group border border-[#D4AF37]/20 rounded-sm bg-white overflow-hidden transition-all duration-300 [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex items-center justify-between p-5 cursor-pointer hover:bg-[#FDFBF7] select-none">
+                        <span class="font-serif font-bold text-neutral-900 group-open:text-[#D4AF37]">9. Are there opportunities for stage performances?</span>
+                        <span class="transition group-open:rotate-180 text-[#D4AF37]">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+                        </span>
+                    </summary>
+                    <div class="p-5 border-t border-[#D4AF37]/10 bg-[#FDFBF7]/30 text-sm text-neutral-600 leading-relaxed">
+                        <b>Absolutely.</b> We host an annual stage showcase for all our batches and actively prepare student teams for state and national competition events.
+                    </div>
+                </details>
+
+                <!-- Q10 -->
+                <details class="group border border-[#D4AF37]/20 rounded-sm bg-white overflow-hidden transition-all duration-300 [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex items-center justify-between p-5 cursor-pointer hover:bg-[#FDFBF7] select-none">
+                        <span class="font-serif font-bold text-neutral-900 group-open:text-[#D4AF37]">10. Is the tuition fee refundable if I miss classes?</span>
+                        <span class="transition group-open:rotate-180 text-[#D4AF37]">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+                        </span>
+                    </summary>
+                    <div class="p-5 border-t border-[#D4AF37]/10 bg-[#FDFBF7]/30 text-sm text-neutral-600 leading-relaxed">
+                        As noted in our studio rules, <b>fees once paid are non-refundable</b> and non-transferable under any circumstances.
+                    </div>
+                </details>
+
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="bg-white border-t border-[#D4AF37]/25 py-16">
+            <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-12 gap-12 text-sm text-neutral-600">
+                <div class="md:col-span-4 space-y-4">
+                    <h3 class="font-serif text-xl font-bold text-neutral-900">Vishu's <span class="text-[#D4AF37]">Dance Academy</span></h3>
+                    <p class="leading-relaxed">Educating and inspiring passionate dancers through grace, discipline, and artistic performance.</p>
+                    
+                </div>
+                <div class="md:col-span-4 space-y-4">
+                    <h4 class="font-serif text-base font-bold text-neutral-900">Contact Details</h4>
+                    <p><b>Email:</b> <a href="mailto:vishu@danceacad.com" class="hover:text-[#D4AF37]">vishu@danceacad.com</a></p>
+                    <p><b>Phone:</b> <a href="tel:+919876543210" class="hover:text-[#D4AF37]">+91 98765 43210</a></p>
+                    <p><b>Address:</b> Madurai, Tamil Nadu, India</p>
+                </div>
+                <div class="md:col-span-4 space-y-4">
+                    <h4 class="font-serif text-base font-bold text-neutral-900">Stay Updated</h4>
+                    <p>Subscribe to our seasonal newsletters and auditions announcements.</p>
+                    <form action="#" method="post" class="flex gap-2">
+                        <input type="email" placeholder="Your email address" class="w-full px-4 py-2 border border-[#D4AF37]/30 rounded-full focus:outline-none focus:border-[#D4AF37] text-sm" required>
+                        <button type="submit" class="px-4 py-2 bg-[#D4AF37] text-white font-bold hover:bg-[#AA823B] rounded-full transition-colors">Subscribe</button>
+                    </form>
+                    <div class="flex items-center gap-4 pt-2">
+                        <a href="https://www.youtube.com/" target="_blank" class="hover:text-[#D4AF37] font-semibold text-xs tracking-wider uppercase">YouTube</a>
+                        <span class="text-neutral-300">|</span>
+                        <a href="https://www.instagram.com/?hl=en" target="_blank" class="hover:text-[#D4AF37] font-semibold text-xs tracking-wider uppercase">Instagram</a>
+                    </div>
+                </div>
+            </div>
+            <div class="max-w-7xl mx-auto px-6 mt-12 pt-6 border-t border-[#D4AF37]/10 flex flex-col items-center gap-4 text-xs">
+                <div class="flex items-center gap-4">
+                    <a href="terms.html" class="hover:text-[#D4AF37] font-semibold">Terms & Conditions</a>
+                    <span class="text-neutral-300">|</span>
+                    <a href="privacy.html" class="hover:text-[#D4AF37] font-semibold">Privacy Policy</a>
+                </div>
+                <p class="text-neutral-400 font-semibold text-center">&copy; 2026 Vishu's Dance Academy. All Rights Reserved.</p>
+            </div>
+        </footer>
+
+    </body>
+</html>
